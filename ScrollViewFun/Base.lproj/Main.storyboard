@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -11,18 +12,54 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ScrollViewFun" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="RJS-Ur-8Mi"/>
+                        <viewControllerLayoutGuide type="bottom" id="nbg-ps-a9L"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="V4V-OK-Tkw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gug-O1-5qA">
+                                <subviews>
+                                    <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="z3M-EW-StB">
+                                        <subviews>
+                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Joy" translatesAutoresizingMaskIntoConstraints="NO" id="5sW-c0-zu7"/>
+                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fear" translatesAutoresizingMaskIntoConstraints="NO" id="eOA-xl-kgB"/>
+                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Disgust" translatesAutoresizingMaskIntoConstraints="NO" id="Mmg-Px-E8G"/>
+                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Anger" translatesAutoresizingMaskIntoConstraints="NO" id="CQB-Up-hT1"/>
+                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sadness" translatesAutoresizingMaskIntoConstraints="NO" id="f37-r1-1lY"/>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="z3M-EW-StB" firstAttribute="top" secondItem="Gug-O1-5qA" secondAttribute="top" id="0Yu-F6-NH2"/>
+                                    <constraint firstItem="z3M-EW-StB" firstAttribute="leading" secondItem="Gug-O1-5qA" secondAttribute="leading" id="E5V-3Q-eMf"/>
+                                    <constraint firstItem="z3M-EW-StB" firstAttribute="trailing" secondItem="Gug-O1-5qA" secondAttribute="trailing" id="JiK-oQ-Gwl"/>
+                                    <constraint firstItem="z3M-EW-StB" firstAttribute="width" secondItem="Gug-O1-5qA" secondAttribute="width" multiplier="5" id="eyd-n5-Gbg"/>
+                                    <constraint firstItem="z3M-EW-StB" firstAttribute="height" secondItem="Gug-O1-5qA" secondAttribute="height" id="ntl-PF-e1y"/>
+                                    <constraint firstItem="z3M-EW-StB" firstAttribute="bottom" secondItem="Gug-O1-5qA" secondAttribute="bottom" id="ptr-Qw-Erp"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.85184798760000002" green="1" blue="0.76251987769999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Gug-O1-5qA" firstAttribute="leading" secondItem="V4V-OK-Tkw" secondAttribute="leading" id="4Su-ve-gDb"/>
+                            <constraint firstItem="Gug-O1-5qA" firstAttribute="bottom" secondItem="nbg-ps-a9L" secondAttribute="top" id="PaU-c0-YMZ"/>
+                            <constraint firstAttribute="trailing" secondItem="Gug-O1-5qA" secondAttribute="trailing" id="PyC-LO-dIQ"/>
+                            <constraint firstItem="Gug-O1-5qA" firstAttribute="top" secondItem="RJS-Ur-8Mi" secondAttribute="bottom" id="SvZ-Qg-CvX"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="281.5" y="396.5"/>
+            <point key="canvasLocation" x="280.80000000000001" y="396.25187406296857"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Anger" width="412" height="634"/>
+        <image name="Disgust" width="414" height="630"/>
+        <image name="Fear" width="416" height="634"/>
+        <image name="Joy" width="406" height="636"/>
+        <image name="Sadness" width="406" height="636"/>
+    </resources>
 </document>
